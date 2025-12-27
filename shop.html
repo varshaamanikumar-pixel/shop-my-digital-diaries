@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shop | My Digital Diaries</title>
+  <link rel="stylesheet" href="style.css">
+<!-- Fancy cursive font for headings -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" 
+rel="stylesheet">
+
+<!-- Clean font for body text -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html" class="logo">
+    <img src="logo.png" alt="My Digital Diaries Logo">
+  </a>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="collections.html">Collections</a></li>
+    <li><a href="freebies.html">Freebies</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="socials.html">Socials</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+  </ul>
+</nav>
+
+<section>
+  <h2>Shop</h2>
+<p class="shop-intro">
+  Curated digital tools to help you stay organised, motivated & glowing!
+</p>
+
+  <div class="product-grid">
+
+    <!-- PRODUCT 1 -->
+
+<a href="https://ko-fi.com/mydigitaldiaries" target="_blank" class="product-card">
+  
+  <div class="product-image-wrapper">
+    <img src="images/wallpaper.png" alt="Product name" class="product-image">
+<div class="product-overlay">
+  <span class="overlay-text">♡ View on Ko-fi → </span>
+</div>  </div>
+
+  <div class="product-info">
+    <div class="product-title">Strawberry Collection: Wallpapers</div>
+    <div class="product-price">$2.00</div>
+  </div>
+
+</a>
+
+    <!-- PRODUCT 2 -->
+<a href="https://ko-fi.com/mydigitaldiaries" target="_blank" class="product-card">
+  
+  <div class="product-image-wrapper">
+    <img src="images/journal.png" alt="Product name" class="product-image">
+       <div class="product-overlay">♡ View on Ko-fi → </div>
+  </div>
+
+  <div class="product-info">
+    <div class="product-title">Strawberry Collection: 2026 Digital Journal</div>
+    <div class="product-price">$2.00</div>
+  </div>
+
+</a>
+
+    <!-- PRODUCT 3 -->
+<a href="https://ko-fi.com/mydigitaldiaries" target="_blank" class="product-card">
+  
+  <div class="product-image-wrapper">
+    <img src="images/posters.png" alt="Product name" class="product-image">
+       <div class="product-overlay">♡ View on Ko-fi → </div>
+  </div>
+
+  <div class="product-info">
+    <div class="product-title">Strawberry Collection: Posters & Wall Art</div>
+    <div class="product-price">$3.00</div>
+  </div>
+
+</a>
+
+  <!-- PRODUCT 4 -->
+<a href="https://ko-fi.com/mydigitaldiaries" target="_blank" class="product-card">
+  
+  <div class="product-image-wrapper">
+    <img src="images/planner.png" alt="Product name" class="product-image">
+       <div class="product-overlay">♡ View on Ko-fi → </div>
+  </div>
+
+  <div class="product-info">
+    <div class="product-title">Strawberry Collection: 2026 Digital Planner</div>
+    <div class="product-price">$3.00</div>
+  </div>
+
+</a>
+
+
+  </div>
+</section>
+
+<footer>
+  made with ♡ by my digital diaries
+</footer>
+<script>
+document.addEventListener('mousemove', function(e) {
+  const sparkle = document.createElement('span');
+  sparkle.classList.add('sparkle');
+  sparkle.textContent = '⋆‧⋆'; // or 💖, 🌸, whatever fits your vibe
+  sparkle.style.left = (e.pageX - 4) + 'px'; // slight offset
+  sparkle.style.top = (e.pageY - 4) + 'px';
+  document.body.appendChild(sparkle);
+
+  setTimeout(() => {
+    sparkle.remove();
+  }, 1000); // matches CSS animation duration
+});
+const body = document.body;
+
+// Default cursor
+let defaultCursor = 'images/cursor.png';
+let clickCursor = 'images/cursor-click.png';
+
+// Set initial cursor
+body.style.cursor = `url(${defaultCursor}) 32 32, auto`;
+
+// Change cursor on click
+document.addEventListener('mousedown', () => {
+  body.style.cursor = `url(${clickCursor}) 32 32, auto`;
+});
+
+document.addEventListener('mouseup', () => {
+  body.style.cursor = `url(${defaultCursor}) 32 32, auto`;
+});
+
+document.addEventListener('click', (e) => {
+  const pop = document.createElement('span');
+  pop.textContent = '♡'; // or 💖
+  pop.style.position = 'absolute';
+  pop.style.left = e.pageX + 'px';
+  pop.style.top = e.pageY + 'px';
+  pop.style.fontSize = '1.5rem';
+  pop.style.pointerEvents = 'none';
+  pop.style.opacity = 1;
+  document.body.appendChild(pop);
+
+  pop.animate([
+    { transform: 'scale(1)', opacity: 1 },
+    { transform: 'scale(1.5)', opacity: 0 }
+  ], { duration: 500 });
+
+  setTimeout(() => pop.remove(), 500);
+});
+</script>
+</body>
+</html>

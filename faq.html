@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FAQ | My Digital Diaries</title>
+  <link rel="stylesheet" href="style.css">
+<!-- Fancy cursive font for headings -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- Clean font for body text -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html" class="logo">
+    <img src="logo.png" alt="My Digital Diaries Logo">
+  </a>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="collections.html">Collections</a></li>
+    <li><a href="freebies.html">Freebies</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="socials.html">Socials</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+  </ul>
+</nav>
+
+
+<section>
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-item">
+    <button class="faq-question">How do I purchase a product?</button>
+    <div class="faq-answer">
+      <p>Simply click on a product listing, and you’ll be taken directly to my Ko-fi store. From there, you can browse through my page, select the product you want, and complete your purchase quickly and easily.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Can I use the products on multiple devices?</button>
+    <div class="faq-answer">
+      <p>Yes! All products are compatible with laptops, tablets, and smartphones, allowing you to stay organized and inspired wherever you go.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Do you offer refunds?</button>
+    <div class="faq-answer">
+      <p>Due to the digital nature of our products, we are unable to offer refunds. However, each item is carefully created to ensure the highest quality for our customers.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Can I resell your products?</button>
+    <div class="faq-answer">
+      <p>No. All products are intended for personal use only. Redistribution or resale of our digital items is not permitted.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">How can I contact you?</button>
+    <div class="faq-answer">
+      <p>You can reach out through any of my <a href="socials.html">socials</a>. I will respond as promptly as possible.</p>
+    </div>
+  </div>
+<p><br><br> <i>if you have more questions, reach out to me on my socials!</i></p>
+
+</section>
+
+
+<footer>
+  made with ♡ by my digital diaries
+</footer>
+
+<!-- FAQ JS -->
+<script>
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+  const question = item.querySelector('.faq-question');
+  question.addEventListener('click', () => {
+    item.classList.toggle('active');
+    const answer = item.querySelector('.faq-answer');
+    if (item.classList.contains('active')) {
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+    } else {
+      answer.style.maxHeight = 0;
+    }
+  });
+});
+</script>
+
+</body>
+</html>
